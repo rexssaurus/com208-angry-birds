@@ -7,6 +7,7 @@
   <meta name="description" content="Los crímenes detrás de cada disparo en Angry Birds. Una crónica para la clase de periodismo de datos de COM208.">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
+  <script src="layout-view.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar a la crónica</a>
@@ -22,10 +23,30 @@
     </nav>
   </header>
 
-  <label class="brandbook-toggle" hidden>
-    <span>Brandbook <strong class="brandbook-on">activo</strong><strong class="brandbook-off">desactivado</strong></span>
-    <input id="brandbook-switch" type="checkbox" role="switch" aria-label="Aplicar brandbook" checked>
-  </label>
+  <div class="demo-controls">
+    <div id="layout-legend" class="layout-legend" hidden>
+      <ul aria-label="Leyenda de la vista de cuadrícula">
+        <li class="layout-key-grid">Cuadrícula</li>
+        <li class="layout-key-margin">Margen</li>
+        <li class="layout-key-padding">Padding</li>
+      </ul>
+      <p id="layout-hint">Apunta o toca un elemento para medirlo.</p>
+      <p id="layout-measurements"></p>
+    </div>
+    <div class="demo-switches">
+      <label id="layout-toggle" class="layout-toggle" hidden>
+        <span>Grid view</span>
+        <input id="layout-switch" type="checkbox" role="switch" aria-describedby="layout-hint">
+      </label>
+      <label class="brandbook-toggle" hidden>
+        <span>Brandbook <strong class="brandbook-on">activo</strong><strong class="brandbook-off">desactivado</strong></span>
+        <input id="brandbook-switch" type="checkbox" role="switch" aria-label="Aplicar brandbook" checked>
+      </label>
+    </div>
+  </div>
+  <div id="layout-overlay" hidden aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" focusable="false"></svg>
+  </div>
 
   <main id="contenido">
     <article>

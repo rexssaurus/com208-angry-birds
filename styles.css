@@ -272,11 +272,16 @@ h2 { font-size: clamp(2rem, 4.9vw, 4.7rem); line-height: 1.04; letter-spacing: -
 }
 
 /* La comparación de identidad funciona también en la etapa de solo CSS. */
-.brandbook-toggle {
+.brandbook-toggle, .demo-controls {
   position: fixed;
   z-index: 20;
   right: 18px;
   bottom: 18px;
+}
+.demo-controls { max-width: calc(100% - 36px); }
+.demo-switches { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+.demo-controls .brandbook-toggle { position: static; }
+:is(.brandbook-toggle, .layout-toggle) {
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -290,7 +295,7 @@ h2 { font-size: clamp(2rem, 4.9vw, 4.7rem); line-height: 1.04; letter-spacing: -
   font: 13px/1.3 system-ui, sans-serif;
   cursor: pointer;
 }
-.brandbook-toggle input {
+:is(.brandbook-toggle, .layout-toggle) input {
   appearance: none;
   position: relative;
   flex: 0 0 36px;
@@ -302,7 +307,7 @@ h2 { font-size: clamp(2rem, 4.9vw, 4.7rem); line-height: 1.04; letter-spacing: -
   background: #dce0e2;
   cursor: pointer;
 }
-.brandbook-toggle input::before {
+:is(.brandbook-toggle, .layout-toggle) input::before {
   content: "";
   position: absolute;
   width: 16px;
@@ -314,8 +319,30 @@ h2 { font-size: clamp(2rem, 4.9vw, 4.7rem); line-height: 1.04; letter-spacing: -
   box-shadow: 0 1px 3px #0005;
 }
 .brandbook-toggle input:checked { background: #bd192d; border-color: #bd192d; }
-.brandbook-toggle input:checked::before { transform: translateX(14px); }
-.brandbook-toggle input:focus-visible { outline: 3px solid #1467a0; outline-offset: 4px; }
+:is(.brandbook-toggle, .layout-toggle) input:checked::before { transform: translateX(14px); }
+:is(.brandbook-toggle, .layout-toggle) input:focus-visible { outline: 3px solid #1467a0; outline-offset: 4px; }
+.layout-toggle[hidden] { display: none; }
+.layout-toggle input:checked { background: #6d28d9; border-color: #6d28d9; }
+.layout-legend {
+  margin: 0 0 8px auto;
+  width: fit-content;
+  max-width: 100%;
+  padding: 9px 12px;
+  background: #fffdf5;
+  border: 1px solid #b7b6ae;
+  border-radius: 12px;
+  box-shadow: 0 3px 14px #1c1e1c22;
+  color: #1c1e1c;
+  font: 12px/1.5 system-ui, sans-serif;
+}
+.layout-legend ul { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 0; padding: 0; list-style: none; font-weight: 700; }
+.layout-legend li::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 5px; border-radius: 2px; background: currentColor; }
+.layout-key-grid { color: #6d28d9; }
+.layout-key-margin { color: #a3430d; }
+.layout-key-padding { color: #167041; }
+#layout-measurements { overflow-wrap: anywhere; }
+#layout-overlay { position: fixed; z-index: 19; inset: 0; pointer-events: none; }
+#layout-overlay svg { display: block; width: 100%; height: 100%; }
 .brandbook-off, .neutral-sprite { display: none; }
 body:has(#brandbook-switch:not(:checked)) .brandbook-on { display: none; }
 body:has(#brandbook-switch:not(:checked)) .brandbook-off { display: inline; }

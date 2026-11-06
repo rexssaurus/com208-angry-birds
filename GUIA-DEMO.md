@@ -58,6 +58,8 @@ La decisión sobre la historia, los supuestos y la prioridad visual es humana. L
 
 El interruptor aparece en las etapas CSS y JavaScript y comienza activado. Permanece disponible al desplazarse por la crónica. Al desactivarlo se usan tipografías de sistema, una paleta neutra, fondos sencillos y las ilustraciones genéricas de la versión inicial. El contenido, los 200 chanchos y la lógica del scroll son los mismos. En la etapa HTML el control queda oculto porque aún no se carga la hoja de estilos. No se guarda la preferencia entre páginas: cada capa comienza con el brandbook activo.
 
+En «03 JavaScript», activa «Grid view» junto al brandbook. Las guías moradas marcan las filas y columnas de CSS Grid. Al apuntar o tocar una caja, su margen exterior se pinta de naranja y su padding interior de verde. La leyenda muestra las medidas en píxeles. En «El origen», apunta a un hueco entre los personajes para ver el margen de la cuadrícula. En la portada, apunta al bloque del titular para comparar su padding.
+
 ## Base de 100 niveles para analizar
 
 `datos/angry_birds_100_niveles_simulados.csv` contiene una fila por nivel, del 1 al 100, con `nivel`, `proteccion`, `pajaros_utilizados` y `bajas_chanchos`. Usa UTF-8 y comas como separador. `datos/ficha_datos.json` documenta las variables y la generación.
