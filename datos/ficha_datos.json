@@ -1,0 +1,38 @@
+{
+  "titulo": "Angry Birds: niveles 1 al 100",
+  "fecha_creacion": "2026-11-06",
+  "naturaleza": "Base de 100 niveles preparada con las reglas del docente.",
+  "fuente_reglas": "Instrucciones del docente del 06-11-2026",
+  "unidad_fila": "Un nivel con una protección homogénea",
+  "numero_filas": 100,
+  "claves": [
+    "nivel"
+  ],
+  "reglas_bajas_por_pajaro": {
+    "Sin protección": 4,
+    "Madera": 3,
+    "Piedra": 2
+  },
+  "distribucion_niveles": {
+    "Sin protección": 34,
+    "Madera": 33,
+    "Piedra": 33
+  },
+  "rango_pajaros": [
+    1,
+    10
+  ],
+  "metodo": "Las protecciones alternan sin protección, madera y piedra. La cantidad de pájaros es 1 + (floor((nivel - 1) / 3) mod 10). Las bajas equivalen a los pájaros por el factor de protección.",
+  "columnas": {
+    "nivel": "Identificador entero del 1 al 100.",
+    "proteccion": "Sin protección, Madera o Piedra.",
+    "pajaros_utilizados": "Cantidad de pájaros utilizados en ese nivel. Entero de 1 a 10.",
+    "bajas_chanchos": "Total de chanchos derrotados en ese nivel. Entero."
+  },
+  "csv": {
+    "archivo": "angry_birds_100_niveles_simulados.csv",
+    "codificacion": "UTF-8",
+    "separador": ",",
+    "estado": "Copia fija de los valores iniciales del Excel. No se actualiza al editar el Excel."
+  }
+}
