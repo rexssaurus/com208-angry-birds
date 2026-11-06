@@ -15,8 +15,14 @@ const lastShot = countRows.length - 1;
 let activeShot = -1;
 let scrollFrame = 0;
 
+function fitCountPanel() {
+  // Si la pila supera la ventana, el scroll permite recorrerla y fija los contadores al pie.
+  countTrack.style.setProperty("--pin-top", `${Math.min(12, window.innerHeight - countPanel.offsetHeight - 80)}px`);
+}
+
 function updateCount() {
   scrollFrame = 0;
+  fitCountPanel();
   const stickyTop = parseFloat(getComputedStyle(countPanel).top);
   const travel = countTrack.offsetHeight - countPanel.offsetHeight;
   const distance = stickyTop - countTrack.getBoundingClientRect().top;
@@ -58,6 +64,7 @@ brandbookSwitch.addEventListener("change", () => {
   const shot = comparisonShot;
   comparisonShot = null;
   requestAnimationFrame(() => {
+    fitCountPanel();
     if (shot !== null) {
       const pinTop = parseFloat(getComputedStyle(countPanel).top);
       const travel = countTrack.offsetHeight - countPanel.offsetHeight;
