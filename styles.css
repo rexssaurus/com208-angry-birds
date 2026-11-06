@@ -547,3 +547,6 @@ body:has(#brandbook-switch:not(:checked)) [data-protection="stone"] :is(.shelter
   .protection-note { font-size: .74rem; }
   .protection-record :is(th, td) { padding: 8px 5px; font-size: .74rem; }
 }
+
+/* Secciones conservadas para una futura ampliación del relato. */
+[data-reserved-section][hidden] { display: none !important; }

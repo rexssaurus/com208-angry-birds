@@ -1,6 +1,6 @@
 # ¿Juego o crimen encubierto? · Demo de la primera sesión
 
-Abre `index.html` en el navegador. El menú superior permite pasar por las tres capas de la misma crónica. Las páginas, la hoja de estilos, el script y las ilustraciones viajan juntos en esta carpeta. Después de la sección 04, «Dos futuros para la isla», aparece la sección 05 de protección y una reflexión final sobre un posible equilibrio entre especies. El interruptor fijo «Brandbook activo / desactivado» permite comparar el diseño de marca con una versión neutra en cualquier parte de la página.
+Abre `index.html` en el navegador. El menú superior permite pasar por las tres capas de la misma crónica. Las páginas, la hoja de estilos, el script y las ilustraciones viajan juntos en esta carpeta. La versión publicada termina en la sección 04, «Dos futuros para la isla». Las secciones 05 (protección) y 06 (equilibrio) están reservadas y ocultas en las tres etapas; se conservan completas para reactivarlas cuando lo solicite el docente. El interruptor fijo «Brandbook activo / desactivado» permite comparar el diseño de marca con una versión neutra en cualquier parte de la página.
 
 ## Primera sesión: 60 minutos
 
@@ -16,7 +16,7 @@ Presentación: [Clase Vibe Coding](https://docs.google.com/presentation/d/1pvD3D
 | 20–23 | 8 | Distinguir HTML, CSS y JavaScript. | Asociar orden, apariencia y recuento con sus capas. |
 | 23–29 | 9 | Mostrar HTML sin estilos ni JavaScript. | La historia mantiene un orden y una tabla identificable. |
 | 29–37 | 10–11 | Aplicar el brandbook y alternar su interruptor. | Cambia la presentación, se conservan texto y cifras. |
-| 37–44 | 12 | Mostrar scroll, acumulación y el selector de protección. | Verificar 50/200 y comparar 4, 3 y 2 bajas con una sola ave. |
+| 37–44 | 12 | Mostrar scroll y acumulación. | Verificar 1/4, 25/100 y 50/200; subir para comprobar la reversión. |
 | 44–47 | 13 | Examinar el dramatismo de los dos futuros. | Relacionar la forma de la curva con la conclusión y su evidencia. |
 | 47–53 | 14–15 | Iterar con criterios y revisar la web. | Un cambio de tamaño o ritmo conserva los datos. |
 | 53–55 | 16 | Distinguir archivos, servidor local y alojamiento. | Una URL local no equivale a una web publicada. |
@@ -34,15 +34,15 @@ La demo se publica en GitHub Pages: [Angry Birds Times](https://rexssaurus.githu
 
 ## Detalle de la demostración
 
-1. **Adelanto (3 min).** Muestra la portada y baja despacio. La pregunta y las dos pilas se quedan en pantalla durante cincuenta lanzamientos. Después aparecen la reflexión inicial, el origen y los dos futuros de la isla. Termina con la comparación de refugios de la sección 05 y la reflexión sobre el equilibrio.
+1. **Adelanto (3 min).** Muestra la portada y baja despacio. La pregunta y las dos pilas se quedan en pantalla durante cincuenta lanzamientos. Después aparecen la reflexión inicial, el origen y los dos futuros de la isla. Cierra en los dos futuros de la sección 04.
 2. **HTML (6 min).** Entra a «01 HTML». Señala el orden del relato, los personajes y las cifras. Muestra en el editor la tabla oculta con los 51 estados del recuento: desde 0 aves y 0 chanchos hasta 50 aves y 200 chanchos. El contenido se entiende sin estilos ni animación. Las curvas conservan su desenlace estático.
 3. **CSS (8 min).** Entra a «02 CSS». Abre el brandbook en la p. 14 para la paleta, la p. 28 para el Tema 4 y las pp. 61–64 para la jerarquía tipográfica. La portada ocurre en el paisaje y las dos curvas caen desde el cielo hasta el suelo. Los personajes, el contorno de las letras y las trayectorias comparten la escena, sin tarjetas ni un velo blanco sobre el fondo. La demo adapta la tipografía con Marker Felt e Impact para titulares y Trebuchet MS para lectura. Usa el interruptor «Brandbook activo / desactivado» para comparar tipografías, colores, paisajes y personajes, conservando el texto y los datos. El control funciona con CSS, sin JavaScript: el estado de un checkbox selecciona el conjunto de estilos mediante `:has()`. Muestra `<link rel="stylesheet" href="styles.css">` y los estilos de las pilas.
-4. **JavaScript (7 min).** Entra a «03 JavaScript» y señala `<script src="script.js" defer></script>`. Baja desde cero hasta cincuenta aves. El recorrido es aproximadamente tres veces más corto: el mismo movimiento de scroll revela más figuras, manteniendo cuatro chanchos por ave. Cada paso agrega un ave a la izquierda y cuatro chanchos a la derecha. Al final quedan 50 y 200. El código mide el avance del scroll, selecciona una fila y actualiza los totales y las figuras. El CSS organiza posiciones, giros y rebotes de Red y los chanchos «Damaged 2» del brandbook. Sube para comprobar que vuelve a la fila anterior. En «Dos futuros», observa cómo se dibuja cada curva y el personaje cae al suelo; el recorrido se repite mientras la escena está visible. Después dedica dos minutos a la sección 05, «¿Y si pudieran protegerse?»: cada clic lanza una sola ave y, únicamente después del impacto, cambia los personajes y cuenta 4, 3 o 2 bajas según la protección.
+4. **JavaScript (7 min).** Entra a «03 JavaScript» y señala `<script src="script.js" defer></script>`. Baja desde cero hasta cincuenta aves. El recorrido es aproximadamente tres veces más corto: el mismo movimiento de scroll revela más figuras, manteniendo cuatro chanchos por ave. Cada paso agrega un ave a la izquierda y cuatro chanchos a la derecha. Al final quedan 50 y 200. El código mide el avance del scroll, selecciona una fila y actualiza los totales y las figuras. El CSS organiza posiciones, giros y rebotes de Red y los chanchos «Damaged 2» del brandbook. Sube para comprobar que vuelve a la fila anterior. En «Dos futuros», observa cómo se dibuja cada curva y el personaje cae al suelo; el recorrido se repite mientras la escena está visible.
 5. **Comprobación oral (3 min).** En el segundo lanzamiento deben verse dos aves y ocho chanchos. Compara esa fila con la anterior y pregunta cuántos chanchos cayeron en ese tiro. Para el cierre, pregunta qué evidencia permitiría evaluar los dos desenlaces y qué sacrifica el diseño al mostrar una idea de forma dramática.
 
 ## Encargos breves para una demostración con IA
 
-- **HTML.** «Usa mi texto en este orden: portada, recuento, reflexión inicial, origen, dos futuros, protección y reflexión final sobre el equilibrio. En el recuento prepara un montón de aves a la izquierda y uno de chanchos desprotegidos a la derecha. Usa los 51 estados de mi tabla. Mantén mis cifras y mi redacción».
+- **HTML.** «Usa mi texto en este orden: portada, recuento, reflexión inicial, origen y dos futuros. En el recuento prepara un montón de aves a la izquierda y uno de chanchos desprotegidos a la derecha. Usa los 51 estados de mi tabla. Mantén mis cifras y mi redacción».
 - **CSS.** «Usa el Tema 4 de mi brandbook como el paisaje de la historia. Coloca los personajes y las curvas directamente en ese mundo. Quita los marcos y las tarjetas. Conserva una lectura clara de qué especie desaparece. Diseña las pilas irregulares y fija el panel solo durante el recorrido del recuento».
 - **JavaScript.** «Empieza el recuento en cero. Selecciona una fila de mi tabla según el scroll y muestra exactamente esa cantidad de figuras, tanto al bajar como al subir. En las dos escenas de la sección 04, dibuja la curva y desplaza el personaje hasta el suelo, con una pausa antes de repetir. Respeta la preferencia de movimiento reducido».
 
@@ -66,11 +66,11 @@ En «03 JavaScript», activa «Grid view» junto al brandbook. Las guías morada
 
 La base fue creada el 06-11-2026 con las reglas del docente: cada pájaro produce cuatro bajas sin protección, tres con madera y dos con piedra. Las protecciones alternan entre niveles: 34 sin protección, 33 con madera y 33 con piedra. Los pájaros utilizados varían entre 1 y 10 y se repiten por grupos de tres para facilitar la comparación. Cada nivel cumple exactamente su proporción.
 
-El Excel complementario contiene las 100 filas, las fórmulas de bajas y un resumen por protección. El CSV es una copia fija de los valores iniciales. Para comparar las relaciones se puede usar un gráfico de dispersión con pájaros utilizados en el eje horizontal, bajas en el vertical y una serie por protección. Las pilas con scroll representan la regla sin protección de cuatro bajas por ave. El módulo «¿Y si pudieran protegerse?» permite comparar las tres protecciones.
+El Excel complementario contiene las 100 filas, las fórmulas de bajas y un resumen por protección. El CSV es una copia fija de los valores iniciales. Para comparar las relaciones se puede usar un gráfico de dispersión con pájaros utilizados en el eje horizontal, bajas en el vertical y una serie por protección. Las pilas con scroll representan la regla sin protección de cuatro bajas por ave. El módulo reservado «¿Y si pudieran protegerse?» permite comparar las tres protecciones cuando se reactive.
 
-## Módulo interactivo: ¿y si pudieran protegerse?
+## Sección 05 reservada: ¿y si pudieran protegerse?
 
-Es la sección 05, después de «Dos futuros para la isla»:  [abrir el módulo](https://rexssaurus.github.io/com208-angry-birds/index.html#proteccion). Cada botón comienza un escenario nuevo con una sola ave y cuatro chanchos sanos. Primero vuela el ave; después del impacto, los chanchos cambian a su versión dañada uno a uno y sube el contador. El ave queda en el suelo hasta el siguiente clic. Cambian el material del refugio, los personajes derrotados y los que quedan a salvo. Los clics no acumulan ataques entre escenarios. Pulsar de nuevo la misma opción repite su animación.
+Está oculta en la versión actual. Al reactivarla, será la sección 05, después de «Dos futuros para la isla»:  [abrir el módulo](https://rexssaurus.github.io/com208-angry-birds/index.html#proteccion). Cada botón comienza un escenario nuevo con una sola ave y cuatro chanchos sanos. Primero vuela el ave; después del impacto, los chanchos cambian a su versión dañada uno a uno y sube el contador. El ave queda en el suelo hasta el siguiente clic. Cambian el material del refugio, los personajes derrotados y los que quedan a salvo. Los clics no acumulan ataques entre escenarios. Pulsar de nuevo la misma opción repite su animación.
 
 | Protección | Aves | Derrotados | A salvo | Bajas por ave |
 | --- | ---: | ---: | ---: | ---: |
@@ -80,7 +80,7 @@ Es la sección 05, después de «Dos futuros para la isla»:  [abrir el módulo]
 
 La comparación usa los niveles 1, 2 y 3 del CSV. Los cuatro chanchos iniciales permiten comparar con el mismo denominador. «A salvo» se calcula restando las bajas a cuatro. La tabla HTML es una copia de esas filas, no se sincroniza al editar el CSV.
 
-En clase, dedica dos minutos de la demostración de JavaScript a elegir las tres opciones y preguntar: «¿Qué cambiamos y qué mantuvimos igual?». La comprobación es contar 4, 3 y 2 personajes dañados después del único lanzamiento. Antes del impacto debe haber cero bajas. No sumar bajas de escenarios distintos.
+Cuando se reactive, dedica dos minutos de la demostración de JavaScript a elegir las tres opciones y preguntar: «¿Qué cambiamos y qué mantuvimos igual?». La comprobación es contar 4, 3 y 2 personajes dañados después del único lanzamiento. Antes del impacto debe haber cero bajas. No sumar bajas de escenarios distintos.
 
 - **HTML:** contiene el titular, los resultados y una tabla consultable en «Ver los datos de esta comparación». Los botones permanecen ocultos hasta cargar la interacción.
 - **CSS:** agrega el paisaje, los personajes, la resortera y el refugio; muestra el escenario estático sin protección. El interruptor de brandbook también cambia el diseño de este módulo.
@@ -89,9 +89,9 @@ En clase, dedica dos minutos de la demostración de JavaScript a elegir las tres
 Encargo de ejemplo: «Usa las filas 1, 2 y 3 de mi base. Mantén una sola ave y cuatro chanchos iniciales en los tres escenarios. Al elegir ninguna protección, madera o piedra, anima primero el vuelo y después del impacto muestra 4, 3 o 2 derrotados; los demás deben quedar a salvo. Usa mis personajes del brandbook y permite comprobar los resultados en una tabla. No acumules ataques entre escenarios ni cambies mis proporciones».
 
 
-## Reflexión final: un equilibrio posible
+## Sección 06 reservada: un equilibrio posible
 
-Después del módulo se plantea la posibilidad de mantener estables ambas poblaciones mediante una intervención responsable y medible. La reflexión propone observar aves y chanchos, evaluar cada lanzamiento y ajustar la ayuda. En clase permite cerrar con la pregunta de qué datos adicionales harían falta para evaluar esa estabilidad.
+Está oculta en la versión actual. Después del módulo se plantea la posibilidad de mantener estables ambas poblaciones mediante una intervención responsable y medible. La reflexión propone observar aves y chanchos, evaluar cada lanzamiento y ajustar la ayuda. En clase permite cerrar con la pregunta de qué datos adicionales harían falta para evaluar esa estabilidad.
 
 El gráfico «Un equilibrio posible» muestra dos curvas que fluctúan y se estabilizan por encima de cero, cada especie en su propio nivel. Usa Red y un chancho sano del brandbook sobre el paisaje del Tema 4. Los personajes recorren las curvas; el ciclo dura 7,5 segundos e incluye una pausa de 2,7 segundos en el desenlace. Solo se anima mientras está visible y la pestaña está activa. Con movimiento reducido, HTML o CSS sin JavaScript, se muestra el estado final completo. El interruptor del brandbook cambia también esta escena.
 
@@ -107,3 +107,7 @@ La nueva diapositiva 4, «El punto de partida de Angry Birds Times», va inmedia
 - **Tesis del relato:** «La ayuda humana puede desbalancear la isla. Medir y ajustar la intervención podría estabilizar ambas especies».
 
 La lámina incluye una captura de los niveles 1 a 3 de la tabla y la portada original del brandbook. Las imágenes enlazan a sus archivos y conservan la pregunta y la tesis como texto editable. Su pie dice «La tesis orienta el relato y debe contrastarse con evidencia». Sus notas incluyen las fuentes, los enlaces y las proporciones. Dedicarle unos dos minutos dentro del bloque de fundamentos, sin añadir un workshop a esta primera sesión.
+
+## Reactivar las secciones reservadas
+
+Por instrucción del docente del 06-11-2026, las secciones 05 y 06 no forman parte del recorrido actual. Se mantienen su HTML, ilustraciones, datos, CSS y JavaScript. Para recuperarlas, retirar únicamente el atributo `hidden` de los elementos con `data-reserved-section="5"` y `data-reserved-section="6"` en `index.html`, `01-html.html` y `02-css.html`; después, comprobar el selector de protección y el gráfico de equilibrio antes de publicar. Se puede reactivar cada sección por separado.
